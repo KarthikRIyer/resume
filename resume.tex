@@ -1,0 +1,121 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+
+\usepackage[backend=biber]{biblatex}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{darktext}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{Karthik}{Iyer}
+%\address{Department of Mathematics, University of Texas at Austin, Austin, TX 78712}
+%\office{PMA 11.142}
+\mobile{+91 8460669619}
+%%% Social
+\email{kiyer@ch.iitr.ac.in}
+%\homepage{ma.utexas.edu/users/richard.wong}
+\github{KarthikRIyer}
+\linkedin{karthikriyer2}
+%%% Optionals
+\position{Software Engineer, JPMorgan Chase \& Co.}%Software Engineer{\enskip\cdotp\enskip}Security Expert}
+%\quote{``Make the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%  Publications
+%-------------------------------------------------------------------------------
+%\addbibresource{resume/papers.bib}
+
+% hook for counting the number of entries
+% inside each refsection in biblatex
+% src: https://tex.stackexchange.com/a/495997/49520
+%\makeatletter
+%\AtDataInput{%
+%  \ifltxcounter{datacount@\the\c@refsection}
+%    {}
+%    {\newcounter{datacount@\the\c@refsection}}%
+%  \stepcounter{datacount@\the\c@refsection}}
+
+%\newcommand*{\refsectionbibcount}{\arabic{datacount@\the\c@refsection}}
+%\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+%\makecvfooter
+  %{\today}
+  %{Claud D. Park~~~·~~~Résumé}
+  %{\thepage}
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+
+
+%%% Import contents
+\import{resume}{education.tex}
+%\import{resume}{papers.tex}
+\import{resume}{experience.tex}
+\import{resume}{research.tex}
+
+%\clearpage
+\import{resume}{projects.tex}
+\import{resume}{honors.tex}
+\import{resume}{skills.tex}
+
+%\clearpage
+%\import{resume}{conferences.tex}
+
+\end{document}
